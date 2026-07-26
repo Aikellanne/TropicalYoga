@@ -14,7 +14,8 @@
     --cobalt-dark: #143560;
     --magenta: #D3316A;
     --green: #2C7A50;
-    --green-dark: #1F5B3B;
+    --green-dark: #113f2a;
+    --green-clean: #15512f;
     --ink: #241708;
     --ink-soft: #4a3823;
     --paper: #FFFBF3;
@@ -111,7 +112,7 @@ header {
     gap: 22px;
 }
 
-/* Botão */
+/*BOTOES*/
 .btn {
     display: inline-flex;
     align-items: center;
@@ -134,12 +135,151 @@ header {
     box-shadow: 4px 4px 0 var(--ink);
 }
 
-.btn-principal:hover{ 
+.btn-principal:hover { 
     transform: translate(-2px,-2px); 
     box-shadow: 6px 6px 0 var(--ink); 
 }
 
-.btn-principal:active{ 
-    transform: translate(0,0); 
-    box-shadow: 2px 2px 0 var(--ink); 
+.btn-secundario {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+}
+
+.btn-secundario:hover { 
+    background: var(--ink); 
+    color: var(--cream); 
+}
+
+/*HERO*/
+.hero {
+    position: relative;
+    padding: 50px 55px 0;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-forma {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+ 
+.hero-forma-rosa {
+    top: 0;
+    left: -30px;
+    width: 130px;
+    height: 900px;
+    opacity: .9;
+}
+
+.hero-forma-direita {
+    top: -30px;
+    right: -60px;
+    width: 620px;
+    height: 620px;
+    opacity: .95;
+}
+
+.hero-conteudo {
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 30px;
+    align-items:center;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-family: var(--display);
+    line-height: 1.04;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin: 0 0 22px;
+    letter-spacing: -0.01em;
+}
+
+.lead {
+    font-size: 17.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 440px;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.texto-chamada {
+    display:inline-flex;
+    align-items:center;
+    gap: 10px;
+    font-family: var(--body);
+    font-weight:700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: 12.5px;
+    color: var(--terracotta-dark);
+    margin-bottom: 15px;
+}
+
+.texto-chamada .ponto {
+    width:8px; 
+    height:8px; 
+    border-radius:50%;
+    background: var(--terracotta);
+    flex-shrink:0;
+}
+
+.hero-imagem{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    position:relative;
+}
+
+.hero-imagem img{
+    width:100%;
+    max-width:520px;
+    height:auto;
+    display:block;
+    position:relative;
+    z-index:2;
+}
+
+/*FAIXA DE BENEFÍCIOS*/
+.beneficios {
+    background: var(--green-clean);
+    padding: 47px 55px;
+    opacity: .98;
+}
+
+.beneficios-grade {
+    max-width: var(--max);
+    margin-top: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--paper);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.beneficio-item img {
+    height: 32px;
+    width: 32px;
 }

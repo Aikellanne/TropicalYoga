@@ -46,19 +46,54 @@
 <main id="container">
     <!--hero-->
     <section class="hero">
-        <svg class="hero-fundo-sol" viewBox="0 0 400 400" fill="none">
-            <circle cx="200" cy="200" r="120" fill="#F2BF27"/>
-            <circle cx="200" cy="200" r="150" stroke="#F2BF27" stroke-width="2" opacity=".5"/>
-            <circle cx="200" cy="200" r="180" stroke="#F2BF27" stroke-width="2" opacity=".3"/>
+        <!--ilustração-->
+        <svg class="hero-forma hero-forma-rosa" viewBox="0 0 220 900" fill="none" preserveAspectRatio="none">
+            <path d="M0 0 H90 C40 140 130 260 70 430 C10 600 100 720 40 900 H0 Z" fill="#E86A6A"/>
+        </svg>
+        <svg class="hero-forma hero-forma-direita" viewBox="0 0 700 700" fill="none" preserveAspectRatio="none">
+            <path d="M700 0 H320 C420 90 380 190 500 260 C640 340 560 460 700 520 Z" fill="#F2BF27"/>
+            <path d="M700 260 C540 300 520 430 380 460 C230 490 260 620 120 640 C60 648 20 660 0 700 H700 Z" fill="#1E4C86"/>
+            <path d="M700 460 C560 470 500 560 340 580 C180 600 160 660 0 700 H700 Z" fill="#2C7A50"/>
         </svg>
 
         <div class="hero-conteudo">
             <div class="hero-texto">
                 <span class="texto-chamada"><span class="ponto"></span>Inspirada no modernismo brasileiro</span>
                 <h1>Yoga é movimento, respiração e presença.</h1>
-                <p>Conecte-se com seu corpo, acalme a mente e viva com mais leveza. Inspire-se na arte, na natureza e em você.</p>
-                <a href="#planos" class="btn btn-principal">Experimente uma aula grátis</a>
-                <a href="#aulas" class="btn btn-fantasma">Conheça as aulas</a>
+                <p class="lead">Conecte-se com seu corpo, acalme a mente e viva com mais leveza. Inspire-se na arte, na natureza e em você.</p>
+                <div class="hero-botoes">
+                    <a href="#planos" class="btn btn-principal">Experimente uma aula grátis</a>    
+                    <a href="#aulas" class="btn btn-secundario">Conheça as aulas</a>
+                </div> 
+            </div>
+            <div class="hero-imagem">
+                <img src="img/personagem-ioga.png" alt="Personagem de Ioga">
+            </div>
+        </div>
+    </section>
+
+     <!--faixa de benefícios-->
+    <section class="beneficios">
+        <div class="beneficios-grade">
+            <div class="beneficio-item">
+                <img src="img/folha.png" alt="folha">
+                <span>Bem-estar físico<br>e mental</span>
+            </div>
+            <div class="beneficio-item">
+                <img src="img/brilho-do-sol.png" alt="sol">
+                <span>Mais energia<br>e disposição</span>
+            </div>
+            <div class="beneficio-item">
+                <img src="img/flor-de-lotus.png" alt="flor de lotus">
+                <span>Equilíbrio<br>emocional</span>
+            </div>
+            <div class="beneficio-item">
+                <img src="img/contorno-em-forma-de-coracao.png" alt="coração">
+                <span>Conexão<br>consigo mesmo</span>
+            </div>
+            <div class="beneficio-item">
+                <img src="img/ioga.png" alt="posição de ioga">
+                <span>Para todos os corpos<br>e níveis</span>
             </div>
         </div>
     </section>
@@ -121,10 +156,6 @@
             </div>
         </div>
     </section>
-
-    <div class="onda-divisor" aria-hidden="true">
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 40 Q 180 90 360 40 T 720 40 T 1080 40 T 1440 40 V90 H0 Z" fill="#2C7A50"/></svg>
-    </div>
 
     <!--planos-->
     <section class="planos">

@@ -257,13 +257,13 @@ header {
 /*FAIXA DE BENEFÍCIOS*/
 .beneficios {
     background: var(--green-clean);
-    padding: 47px 55px;
+    padding: 50px 55px;
     opacity: .98;
+    margin-top: 0 auto;
 }
 
 .beneficios-grade {
     max-width: var(--max);
-    margin-top: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -282,4 +282,85 @@ header {
 .beneficio-item img {
     height: 32px;
     width: 32px;
+}
+
+/*SOBRE*/
+.sobre {
+    padding: 90px 35px;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.sobre-conteudo {
+    width: 100%;
+    display:grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 80px;
+    align-items:center;
+}
+
+.sobre-visual {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sobre-arco {
+    position: relative;
+    overflow: hidden;
+    border: 2.5px solid var(--ink);
+    border-radius: 200px 200px 40px 40px;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 4/5;
+}
+
+.sobre-arco img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.sobre-texto {
+    width: 100%;
+    max-width: 590px;
+}
+
+.sobre-texto h2 {
+    max-width: 560px;
+    font-family: var(--display);
+    font-size: 40px;
+    color: var(--green-dark);
+    margin-bottom: 18px;
+    
+}
+
+.sobre-texto p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+}
+
+.sobre-estatisticas {
+    display: flex;
+    gap: 40px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+.sobre-estatisticas strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 34px;
+    color: var(--terracotta);
+}
+
+.sobre-estatisticas div span {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--ink-soft);
 }

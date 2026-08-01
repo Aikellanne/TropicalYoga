@@ -808,7 +808,6 @@ header {
     grid-template-columns: 0.75fr 1.25fr;
     align-items: start;
     gap: 50px; 
-    padding: 0 32px;
 }
 
 .faq-texto h2 {
@@ -836,7 +835,7 @@ header {
 }
 
 .faq-item {
-    width: 95%;
+    width: 90%;
     overflow: hidden;
     background: var(--cream-2);
     border: 2px solid var(--ink);
@@ -870,30 +869,20 @@ header {
     flex-shrink: 0;
     border: 2px solid var(--ink);
     border-radius: 50%;
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease;
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-.icone-faq::before,
-.icone-faq::after {
+.icone-faq::before, .icone-faq::after {
     content: "";
-
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 12px;
     height: 2px;
-
     background: var(--ink);
     border-radius: 10px;
-
     transform: translate(-50%, -50%);
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .icone-faq::after {
@@ -903,24 +892,17 @@ header {
 .faq-resposta {
     display: grid;
     grid-template-rows: 0fr;
-
     transition: grid-template-rows 0.35s ease;
 }
 
 .faq-resposta-conteudo {
     overflow: hidden;
-
     padding: 0 24px;
-
     font-size: 15px;
     line-height: 1.7;
-
     color: var(--ink-soft);
-
     transition: padding 0.35s ease;
 }
-
-/* ITEM ABERTO */
 
 .faq-item.aberto .faq-resposta {
     grid-template-rows: 1fr;
@@ -942,4 +924,66 @@ header {
 
 .faq-item.aberto .icone-faq::after {
     transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/*CTA*/
+.cta {
+    background: var(--terracotta);
+    color: var(--paper);
+    padding: 95px 0;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta-conteudo {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.cta::before {
+    content:"";
+    position:absolute;
+    left:50%; 
+    top:-260px;
+    transform: translateX(-50%);
+    width:700px; 
+    height:700px;
+    border-radius:50%;
+    border: 2px dashed rgba(255,251,243,.35);
+}
+
+.cta h2 {
+    font-size: clamp(2rem, 4.4vw, 3.4rem);
+    color: var(--paper);
+    max-width: 720px;
+    margin: 0 auto 30px;
+    line-height:1.14;
+    position:relative; 
+    z-index:2;
+    font-family: var(--display);
+}
+
+.cta .btn { 
+    position:relative; 
+    z-index:2; 
+}
+
+.btn-cta {
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 4px 4px 0 rgba(0,0,0,.25);
+}
+
+.btn-cta:hover { 
+    transform: translate(-2px,-2px); 
+    box-shadow: 6px 6px 0 rgba(0,0,0,.25); 
+}
+
+/*FOOTER*/
+footer { 
+    background: var(--ink); 
+    color: var(--cream); 
+    padding: 76px 0 30px; 
 }

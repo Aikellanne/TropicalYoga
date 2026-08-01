@@ -442,10 +442,10 @@
                     <svg class="icone-sol" viewBox="0 0 60 60" fill="none">
                         <circle cx="30" cy="30" r="13" fill="#F2BF27"/>
                         <g stroke="#F2BF27" stroke-width="4" stroke-linecap="round">
-                        <line x1="30" y1="2" x2="30" y2="10"/><line x1="30" y1="50" x2="30" y2="58"/>
-                        <line x1="2" y1="30" x2="10" y2="30"/><line x1="50" y1="30" x2="58" y2="30"/>
-                        <line x1="9" y1="9" x2="15" y2="15"/><line x1="45" y1="45" x2="51" y2="51"/>
-                        <line x1="51" y1="9" x2="45" y2="15"/><line x1="15" y1="45" x2="9" y2="51"/>     
+                            <line x1="30" y1="2" x2="30" y2="10"/><line x1="30" y1="50" x2="30" y2="58"/>
+                            <line x1="2" y1="30" x2="10" y2="30"/><line x1="50" y1="30" x2="58" y2="30"/>
+                            <line x1="9" y1="9" x2="15" y2="15"/><line x1="45" y1="45" x2="51" y2="51"/>
+                            <line x1="51" y1="9" x2="45" y2="15"/><line x1="15" y1="45" x2="9" y2="51"/>     
                         </g>
                     </svg> 
                     Tropical Yoga
@@ -464,7 +464,7 @@
             <div class="footer-coluna">
                 <h4>Contato</h4>
                 <ul>
-                    <li><a href="mailto:ola@tropicoyoga.com.br">ola@tropicoyoga.com.br</a></li>
+                    <li><a href="mailto:ola@tropicoyoga.com.br">ola@tropicalyoga.com.br</a></li>
                     <li><a href="tel:+5586999990000">(86) 99999-0000</a></li>
                     <li><a href="#">Rua das Palmeiras, 210 — Teresina, PI</a></li>
                 </ul>
@@ -472,9 +472,9 @@
             <div class="footer-coluna">
                 <h4>Receba novidades</h4>
                 <p style="font-size:13.5px; color:rgba(247,239,220,.65); margin-bottom:10px;">Turmas novas e vagas em workshops, direto no seu e-mail.</p>
-                <form class="newsletter">
-                    <label for="newsletter-email" style="position:absolute; left:-9999px;"></label>
-                    <input type="email" placeholder="seu@email.com" required>
+                <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value='Inscrito!';">
+                    <label for="newsletter-email" style="position:absolute; left:-9999px;">E-mail</label>
+                    <input type="email" placeholder="seu@email.com" id="newsletter-email" required>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -491,6 +491,8 @@
             </div>
         </div>
 </footer>
+
 <script src="script.js"></script> 
+
 </body>
 </html>

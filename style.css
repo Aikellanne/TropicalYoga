@@ -810,6 +810,11 @@ header {
     gap: 50px; 
 }
 
+.faq-texto {
+    max-width: 620px;
+    margin-bottom: 56px;
+}
+
 .faq-texto h2 {
     font-size: clamp(2rem, 3.6vw, 2.9rem);
     font-weight: 700;
@@ -818,7 +823,7 @@ header {
     color: var(--green-dark);
     margin: 0;
     max-width: 360px;
-  }
+}
 
 .faq-texto p {
     margin-top: 20px;

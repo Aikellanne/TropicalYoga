@@ -155,7 +155,7 @@ header {
 /*HERO*/
 .hero {
     position: relative;
-    padding: 50px 55px 0;
+    padding: 65px 55px 0;
     overflow: hidden;
     isolation: isolate;
 }
@@ -169,7 +169,7 @@ header {
 .hero-forma-rosa {
     top: 0;
     left: -30px;
-    width: 130px;
+    width: 160px;
     height: 900px;
     opacity: .9;
 }
@@ -258,31 +258,34 @@ header {
 /*FAIXA DE BENEFÍCIOS*/
 .beneficios {
     background: var(--green-clean);
-    padding: 50px 55px;
+    padding: 55px 55px;
     opacity: .98;
-    margin-top: 0 auto;
 }
 
 .beneficios-grade {
+    width: 100%;
     max-width: var(--max);
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 24px;
 }
 
 .beneficio-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
+    gap: 12px;
     color: var(--paper);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
+    flex: 1;
 }
 
 .beneficio-item img {
     height: 32px;
     width: 32px;
+    flex-shrink: 0;
 }
 
 /*SOBRE*/

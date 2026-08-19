@@ -45,3 +45,68 @@ botaoEsquerda.addEventListener("click", () => {
         });
     }
 });
+
+
+const itensFaq = document.querySelectorAll(".faq-item");
+
+itensFaq.forEach((item) => {
+    const pergunta = item.querySelector(".faq-pergunta");
+
+    pergunta.addEventListener("click", () => {
+        const estaAberto = item.classList.contains("aberto");
+
+        itensFaq.forEach((outroItem) => {
+            outroItem.classList.remove("aberto");
+        });
+
+        if (!estaAberto) {
+            item.classList.add("aberto");
+        }
+    });
+});
+
+// ========================================
+// NEWSLETTER
+// ========================================
+const formularioNewsletter = document.querySelector(".newsletter");
+const emailNewsletter = document.querySelector("#newsletter-email");
+const mensagemNewsletter = document.querySelector(".newsletter-mensagem");
+
+formularioNewsletter.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const email = emailNewsletter.value.trim();
+
+    emailNewsletter.classList.remove("erro", "sucesso");
+    mensagemNewsletter.classList.remove("erro", "sucesso");
+
+    if (email === "") {
+        mostrarErroNewsletter("Digite seu e-mail.");
+        return;
+    }
+
+    if (!emailValido(email)) {
+        mostrarErroNewsletter("Digite um e-mail válido.");
+        return;
+    }
+
+    emailNewsletter.classList.add("sucesso");
+
+    mensagemNewsletter.textContent =
+        "Pronto! Você está na nossa lista.";
+
+    mensagemNewsletter.classList.add("sucesso");
+
+    formularioNewsletter.reset();
+});
+
+function emailValido(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function mostrarErroNewsletter(mensagem) {
+    emailNewsletter.classList.add("erro");
+
+    mensagemNewsletter.textContent = mensagem;
+    mensagemNewsletter.classList.add("erro");
+}

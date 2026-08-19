@@ -423,10 +423,18 @@
             <div class="footer-coluna">
                 <h4>Receba novidades</h4>
                 <p style="font-size:13.5px; color:rgba(247,239,220,.65); margin-bottom:10px;">Turmas novas e vagas em workshops, direto no seu e-mail.</p>
-                <form class="newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value='Inscrito!';">
-                    <label for="newsletter-email" style="position:absolute; left:-9999px;">E-mail</label>
-                    <input type="email" placeholder="seu@email.com" id="newsletter-email" required>
-                    <button type="submit">Enviar</button>
+                <form class="newsletter" novalidate>
+                    <label for="newsletter-email" class="sr-only">E-mail</label>
+                    <div class="newsletter-campo">
+                        <input 
+                        type="email" 
+                        placeholder="seu@email.com"
+                        id="newsletter-email" 
+                        autocomplete="email"
+                        >
+                        <button type="submit">Enviar</button>
+                    </div>
+                    <span class="newsletter-mensagem"></span>
                 </form>
             </div>
         </div>

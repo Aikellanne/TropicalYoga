@@ -1,3 +1,6 @@
+// ========================================
+// DEPOIMENTOS
+// ========================================
 const carrossel = document.querySelector(".depoimentos-carrossel");
 const botaoEsquerda = document.querySelector(".seta-esquerda");
 const botaoDireita = document.querySelector(".seta-direita");
@@ -46,7 +49,9 @@ botaoEsquerda.addEventListener("click", () => {
     }
 });
 
-
+// ========================================
+// FAQ
+// ========================================
 const itensFaq = document.querySelectorAll(".faq-item");
 
 itensFaq.forEach((item) => {
@@ -76,7 +81,6 @@ formularioNewsletter.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const email = emailNewsletter.value.trim();
-
     emailNewsletter.classList.remove("erro", "sucesso");
     mensagemNewsletter.classList.remove("erro", "sucesso");
 
@@ -84,19 +88,14 @@ formularioNewsletter.addEventListener("submit", (event) => {
         mostrarErroNewsletter("Digite seu e-mail.");
         return;
     }
-
     if (!emailValido(email)) {
         mostrarErroNewsletter("Digite um e-mail válido.");
         return;
     }
 
     emailNewsletter.classList.add("sucesso");
-
-    mensagemNewsletter.textContent =
-        "Pronto! Você está na nossa lista.";
-
+    mensagemNewsletter.textContent = "Pronto! Você está na nossa lista.";
     mensagemNewsletter.classList.add("sucesso");
-
     formularioNewsletter.reset();
 });
 
@@ -106,7 +105,41 @@ function emailValido(email) {
 
 function mostrarErroNewsletter(mensagem) {
     emailNewsletter.classList.add("erro");
-
     mensagemNewsletter.textContent = mensagem;
     mensagemNewsletter.classList.add("erro");
 }
+
+// ========================================
+// MENU HAMBÚRGUER
+// ========================================
+const menuHamburguer = document.querySelector(".menu-hamburguer");
+const menu = document.querySelector(".nav-links");
+const linksMenu = document.querySelectorAll(".nav-links a");
+
+menuHamburguer.addEventListener("click", () => {
+    const estaAberto = menu.classList.toggle("ativo");
+    menuHamburguer.classList.toggle("ativo");
+    menuHamburguer.setAttribute(
+        "aria-expanded",
+        estaAberto
+    );
+    menuHamburguer.setAttribute(
+        "aria-label",
+        estaAberto ? "Fechar menu" : "Abrir menu"
+    );
+});
+
+linksMenu.forEach((link) => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+        menuHamburguer.classList.remove("ativo");
+        menuHamburguer.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+        menuHamburguer.setAttribute(
+            "aria-label",
+            "Abrir menu"
+        );
+    });
+});

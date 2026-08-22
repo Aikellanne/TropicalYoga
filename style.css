@@ -54,7 +54,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 78px;
-    padding: 0 32px;
+    padding: 0 30px;
     max-width: var(--max);
     margin: 0 auto;
 }
@@ -108,10 +108,29 @@ header {
     width: 100%;
 }
 
-.nav-right {
+.nav-actions {
     display: flex;
     align-items: center;
     gap: 22px;
+}
+
+.menu-hamburguer {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background: var(--ink);
+    transition: transform .3s ease, opacity .3s ease;
 }
 
 /*BOTOES*/
@@ -324,7 +343,8 @@ header {
     height: 100%;
     width: 100%;
     display: block;
-    object-fit: fill;
+    object-fit: cover;
+    object-position: center;
 }
 
 .sobre-texto {
@@ -475,7 +495,7 @@ header {
     top: 40%;
     width: 200px;
     height: 250px;
-    transform: rotate(-7deg)
+    transform: rotate(-7deg);
 }
 
 .azul-esquerda {
@@ -493,17 +513,16 @@ header {
 }
 
 .folhagem-direita {
-    position: absolute;
+
     right: -60px;
     top: 30%;
     width: 190px;
     height: 300px;
     z-index: 1;
-    transform: rotate(-10deg)
+    transform: rotate(-10deg);
 }
 
 .azul-direita {
-    position: absolute;
     right: 0;
     bottom: 0;
     width: 250px;
@@ -743,9 +762,8 @@ header {
     font-size: 15.5px;
     line-height:1.65;
     color: var(--ink-soft);
-    margin-bottom: 22px;
     min-height: 130px;
-    margin: 0;
+    margin: 0 0 15px;
 }
 
 .depoimentos-usuario {
@@ -798,6 +816,14 @@ header {
 .botoes-carrossel button:hover { 
     background: var(--ink); 
     color: var(--cream); 
+}
+
+.botoes-carrossel button:hover svg path {
+    stroke: var(--cream);
+}
+
+.botoes-carrossel button svg path {
+    transition: stroke .2s ease;
 }
 
 /*FAQ*/
@@ -1072,6 +1098,7 @@ footer {
 .newsletter-campo {
     display: flex;
     gap: 8px;
+    min-width: 0;
 }
 
 .newsletter-mensagem {
@@ -1132,6 +1159,7 @@ footer {
     font-weight:700;
     cursor:pointer;
     font-size:13.5px;
+    flex-shrink: 0;
 }
 
 .footer-base {
@@ -1164,4 +1192,63 @@ footer {
 .redes-sociais a:hover { 
     background: var(--terracotta); 
     border-color: var(--terracotta); 
+}
+
+
+/*RESPONSIVIDADE*/
+@media (max-width: 850px) {
+    #navbar {
+        position: relative;
+        padding: 0 22px;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        position: relative;
+        z-index: 102;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 30px 20px;
+        background: var(--cream);
+        border-bottom: 2px solid var(--ink);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    }
+
+    .nav-links.ativo {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .menu-hamburguer.ativo span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-hamburguer.ativo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburguer.ativo span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }

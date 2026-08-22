@@ -49,26 +49,47 @@ botaoEsquerda.addEventListener("click", () => {
     }
 });
 
+
 // ========================================
 // FAQ
 // ========================================
 const itensFaq = document.querySelectorAll(".faq-item");
 
 itensFaq.forEach((item) => {
+
     const pergunta = item.querySelector(".faq-pergunta");
 
     pergunta.addEventListener("click", () => {
+
         const estaAberto = item.classList.contains("aberto");
 
+        // Fecha todos
         itensFaq.forEach((outroItem) => {
+
             outroItem.classList.remove("aberto");
+
+            const outraPergunta =
+                outroItem.querySelector(".faq-pergunta");
+
+            outraPergunta.setAttribute(
+                "aria-expanded",
+                "false"
+            );
         });
 
+        // Abre o selecionado
         if (!estaAberto) {
+
             item.classList.add("aberto");
+
+            pergunta.setAttribute(
+                "aria-expanded",
+                "true"
+            );
         }
     });
 });
+
 
 // ========================================
 // NEWSLETTER
@@ -116,13 +137,24 @@ const menuHamburguer = document.querySelector(".menu-hamburguer");
 const menu = document.querySelector(".nav-links");
 const linksMenu = document.querySelectorAll(".nav-links a");
 
+function fecharMenu() {
+    menu.classList.remove("ativo");
+    menuHamburguer.classList.remove("ativo");
+
+    menuHamburguer.setAttribute("aria-expanded", "false");
+    menuHamburguer.setAttribute("aria-label", "Abrir menu");
+}
+
 menuHamburguer.addEventListener("click", () => {
     const estaAberto = menu.classList.toggle("ativo");
+
     menuHamburguer.classList.toggle("ativo");
+
     menuHamburguer.setAttribute(
         "aria-expanded",
         estaAberto
     );
+
     menuHamburguer.setAttribute(
         "aria-label",
         estaAberto ? "Fechar menu" : "Abrir menu"
@@ -130,16 +162,5 @@ menuHamburguer.addEventListener("click", () => {
 });
 
 linksMenu.forEach((link) => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("ativo");
-        menuHamburguer.classList.remove("ativo");
-        menuHamburguer.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-        menuHamburguer.setAttribute(
-            "aria-label",
-            "Abrir menu"
-        );
-    });
+    link.addEventListener("click", fecharMenu);
 });

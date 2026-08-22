@@ -39,6 +39,13 @@ body {
     overflow-x: hidden;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--terracotta);
+    outline-offset: 4px;
+}   
+
 /*MENU DE NAVEGAÇÃO*/
 header {
     position: sticky;

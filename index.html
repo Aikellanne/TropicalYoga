@@ -299,11 +299,11 @@
                     </div> 
                 </div>
             </div>
-            <div class="botoes-carrossel">
+            <div type="button" class="botoes-carrossel">
                 <button class="seta-esquerda" aria-label="Voltar depoimento">
                     <svg width="18" height="18" viewBox="0 0 18 18"><path d="M11 3 L5 9 L11 15" stroke="#241708" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
-                <button class="seta-direita" aria-label="Próximo depoimento">
+                <button type="button" class="seta-direita" aria-label="Próximo depoimento">
                     <svg width="18" height="18" viewBox="0 0 18 18"><path d="M7 3 L13 9 L7 15" stroke="#241708" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
             </div>
@@ -321,7 +321,7 @@
 
             <div class="faq-lista">
                 <div class="faq-item aberto">  
-                    <button class="faq-pergunta" type="button">
+                    <button class="faq-pergunta" type="button" aria-expanded="true">
                         <span>Preciso ter experiência prévia com yoga?</span>
                         <span class="icone-faq"></span>
                     </button>
@@ -333,7 +333,7 @@
                 </div>
             
                 <div class="faq-item">
-                    <button class="faq-pergunta" type="button">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
                         <span>Preciso ser flexível para começar?</span>
                         <span class="icone-faq"></span>
                     </button>
@@ -345,7 +345,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-pergunta" type="button">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
                         <span>Existe limite de idade?</span>
                         <span class="icone-faq"></span>
                     </button>
@@ -356,7 +356,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-pergunta" type="button">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
                         <span>Posso trocar de plano depois de assinar?</span>
                         <span class="icone-faq"></span>
                     </button>
@@ -367,7 +367,7 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-pergunta" type="button">
+                    <button class="faq-pergunta" type="button" aria-expanded="false">
                         <span>Como funciona a aula experimental gratuita?</span>
                         <span class="icone-faq"></span>
                     </button>
@@ -435,13 +435,15 @@
                     <div class="newsletter-campo">
                         <input 
                         type="email" 
+                        name="email"
                         placeholder="seu@email.com"
                         id="newsletter-email" 
                         autocomplete="email"
+                        required
                         >
                         <button type="submit">Enviar</button>
                     </div>
-                    <span class="newsletter-mensagem"></span>
+                    <p class="newsletter-mensagem" aria aria-live="polite"></p>
                 </form>
             </div>
         </div>

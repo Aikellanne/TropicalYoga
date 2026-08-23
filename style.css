@@ -42,7 +42,7 @@ body {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-    outline: 3px solid var(--terracotta);
+    outline: 3px solid var(--cobalt);
     outline-offset: 4px;
 }   
 
@@ -449,11 +449,9 @@ header {
     padding: 18px 16px 22px;
     background: var(--paper);
     border-radius: 18px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .aulas-card:hover {
-    transform: translateY(-7px);
     box-shadow: 8px 8px 0 rgba(36, 23, 8, 0.18);
 }
 
@@ -1203,15 +1201,73 @@ footer {
 
 
 /*RESPONSIVIDADE*/
-@media (max-width: 850px) {
+@media (max-width: 980px) {
+    .nav-links { display: none; }
+    .menu-hamburguer { display: block; }
+    .hero-conteudo { grid-template-columns: 1fr; gap: 35px; text-align: center; padding-bottom: 45px; }
+    .hero-forma { display: none; }
+    .hero h1 { font-size: 40px; }
+    .lead { max-width: 100%; margin-left: auto;margin-right: auto; }
+    .hero-imagem img { max-width: 400px; }
+    .hero-botoes { justify-content: center; }
+    .beneficios { padding: 40px 30px; }
+    .beneficios-grade { gap: 25px;}
+    .beneficio-item { font-size: 12px; gap: 8px; }
+    .sobre-conteudo { grid-template-columns: 1fr; }
+    .sobre-arco { width: 36px; height: 36px; border: 2.5px solid var(--ink); }
+    .sobre-arco img { display: none; }
+    .aulas-texto h2 { font-size: 34px; }
+    .aulas { padding: 60px 30px; }
+    .aulas-grade { grid-template-columns: repeat(2,1fr);max-width: 700px; }
+    .aulas-card { min-height: 300px; }
+    .aulas-forma { display: none; }
+    .planos-grade { grid-template-columns:1fr; max-width:440px; margin:0 auto; }
+    .planos-card .destaque { transform:none; }
+    .depoimentos { padding: 75px 30px; }
+    .depoimentos-texto { margin-bottom: 34px; }
+    .depoimentos-card { min-width: 320px; max-width: 320px; }
+    .faq { padding: 75px 30px; }
+    .faq-conteudo { grid-template-columns: 1fr; gap: 35px; }
+    .faq-texto { max-width: 600px; margin-bottom: 0; }
+    .faq-texto h2 { max-width: none; }
+    .faq-item { width: 100%; }
+    .cta { padding: 75px 30px; }
+    .footer-grade { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+    .beneficios { padding: 40px 30px; }
+    .beneficios-grade { gap: 20px;}
+    .beneficio-item { font-size: 10px; gap: 5px; }
+}
+
+@media (max-width: 600px) {
+
+    /* ------------------------------
+       MENU HAMBÚRGUER
+    ------------------------------ */
+
     #navbar {
-        position: relative;
-        padding: 0 22px;
+        height: 68px;
+        padding: 0 18px;
     }
 
-    .nav-actions {
+    .logo {
+        font-size: 19px;
+    }
+
+    .icone-sol {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* esconde links */
+
+    .nav-links {
         display: none;
     }
+
+    /* mostra botão */
 
     .menu-hamburguer {
         display: block;
@@ -1219,33 +1275,64 @@ footer {
         z-index: 102;
     }
 
-    .nav-links {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        padding: 30px 20px;
-        background: var(--cream);
-        border-bottom: 2px solid var(--ink);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-12px);
-        transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    /* as 3 linhas */
+
+    .menu-hamburguer span {
+        width: 26px;
+        height: 3px;
+        margin: 5px auto;
+        background: var(--ink);
+        border-radius: 10px;
     }
+
+    /* esconde o botão principal do menu */
+
+    .nav-actions > .btn {
+        display: none;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* ------------------------------
+       MENU ABERTO
+    ------------------------------ */
 
     .nav-links.ativo {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        display: flex;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        padding: 20px;
+
+        background: var(--cream);
+        border-bottom: 2px solid var(--ink);
+
+        box-shadow: 0 8px 20px rgba(36, 23, 8, .12);
     }
 
-    .nav-links a {
-        font-size: 16px;
+    .nav-links.ativo li {
+        width: 100%;
+        text-align: center;
     }
+
+    .nav-links.ativo a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    /* transforma o X quando aberto */
 
     .menu-hamburguer.ativo span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -1258,4 +1345,337 @@ footer {
     .menu-hamburguer.ativo span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+
+    /* ------------------------------
+       HERO
+    ------------------------------ */
+
+    .hero {
+        padding: 45px 20px 0;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+        padding-bottom: 45px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.08;
+    }
+
+    .lead {
+        max-width: 100%;
+        font-size: 15.5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-imagem img {
+        width: 90%;
+        max-width: 360px;
+    }
+
+    /* esconde formas do hero */
+
+    .hero-forma {
+        display: none;
+    }
+
+    .beneficios { padding: 35px 20px; }
+    .beneficios-grade {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 12px;
+    }
+
+    .beneficio-item {
+        justify-content: flex-start;
+        font-size: 11.5px;
+    }
+
+    .beneficio-item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* último item centralizado */
+
+    .beneficio-item:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+
+    /* ------------------------------
+       SOBRE
+    ------------------------------ */
+
+    .sobre {
+        padding: 65px 20px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-visual {
+        order: 1;
+    }
+
+    .sobre-texto {
+        order: 2;
+        text-align: left;
+    }
+
+    .sobre-arco {
+        width: 80%;
+        max-width: 330px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 32px;
+    }
+
+    .sobre-texto p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .sobre-estatisticas {
+        gap: 25px;
+        margin-top: 28px;
+    }
+
+    .sobre-estatisticas strong {
+        font-size: 29px;
+    }
+
+
+    /* ------------------------------
+       AULAS
+    ------------------------------ */
+
+    .aulas {
+        padding: 65px 20px;
+    }
+
+    .aulas-texto h2 {
+        font-size: 32px;
+    }
+
+    .aulas-texto p {
+        font-size: 15px;
+    }
+
+    .aulas-grade {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+
+    .aulas-card {
+        min-height: auto;
+        padding: 20px 18px 25px;
+    }
+
+    .img-aula {
+        height: 180px;
+    }
+
+    /* nenhuma ondulação no celular */
+
+    .aulas-forma {
+        display: none;
+    }
+
+
+    /* ------------------------------
+       PLANOS
+    ------------------------------ */
+
+    .planos {
+        padding: 65px 20px;
+    }
+
+    .planos-texto h2 {
+        font-size: 32px;
+    }
+
+    .planos-texto p {
+        font-size: 15px;
+    }
+
+    .planos-grade {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .planos-card {
+        padding: 30px 24px;
+    }
+
+    /* volta ao tamanho normal */
+
+    .planos-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+
+    /* ------------------------------
+       DEPOIMENTOS
+    ------------------------------ */
+
+    .depoimentos {
+        padding: 65px 20px;
+    }
+
+    .depoimentos-texto {
+        margin-bottom: 35px;
+    }
+
+    .depoimentos-texto h2 {
+        font-size: 32px;
+    }
+
+    .depoimentos-carrossel {
+        gap: 16px;
+        padding: 5px 2px 20px;
+    }
+
+    .depoimentos-card {
+        min-width: 85vw;
+        max-width: 85vw;
+        padding: 25px;
+    }
+
+    .depoimentos-card p {
+        min-height: auto;
+        font-size: 15px;
+    }
+
+    .botoes-carrossel {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+
+    /* ------------------------------
+       FAQ
+    ------------------------------ */
+
+    .faq {
+        padding: 65px 20px;
+    }
+
+    .faq-conteudo {
+        gap: 30px;
+    }
+
+    .faq-texto {
+        margin-bottom: 0;
+    }
+
+    .faq-texto h2 {
+        font-size: 32px;
+    }
+
+    .faq-texto p {
+        font-size: 15px;
+    }
+
+    .faq-item {
+        width: 100%;
+        border-radius: 14px;
+    }
+
+    .faq-pergunta {
+        min-height: 62px;
+        padding: 17px 18px;
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .icone-faq {
+        width: 25px;
+        height: 25px;
+    }
+
+    .faq-resposta-conteudo {
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 14px;
+    }
+
+    .faq-item.aberto .faq-resposta-conteudo {
+        padding: 0 18px 20px;
+    }
+
+
+    /* ------------------------------
+       CTA
+    ------------------------------ */
+
+    .cta {
+        padding: 70px 20px;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .cta::before {
+        width: 500px;
+        height: 500px;
+    }
+
+
+    /* ------------------------------
+       FOOTER
+    ------------------------------ */
+
+    footer {
+        padding: 60px 20px 25px;
+    }
+
+    .rodape {
+        padding: 0;
+    }
+
+    .footer-grade {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 35px;
+    }
+
+    .footer-marca p {
+        max-width: 100%;
+    }
+
+    .newsletter-campo {
+        flex-direction: column;
+    }
+
+    .newsletter button {
+        min-height: 44px;
+        padding: 0 18px;
+    }
+
+    .footer-base {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .redes-sociais {
+        margin-top: 5px;
+    }
+
 }

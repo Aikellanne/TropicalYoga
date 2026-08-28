@@ -1204,6 +1204,13 @@ footer {
 @media (max-width: 980px) {
     .nav-links { display: none; }
     .menu-hamburguer { display: block; }
+    .nav-links.ativo { display: flex; position: absolute; top: 68px; left: 0; width: 100%; flex-direction: column; align-items: center; gap: 12px; padding: 20px; background-color: rgba(247,239,220,0.98); border-bottom: 2px solid var(--ink); }
+    .nav-links.ativo li { width: 100%; text-align: center; }
+    .nav-links.ativo a { font-size: 15px; text-decoration: none; position: relative; padding: 4px 0; }
+    .nav-links a::after { content: ""; position: absolute;
+    left: 0; bottom: 2px; width: 0; height: 3px; border-radius: 2px; background: var(--terracotta);
+    transition: width .25s ease; }
+    .nav-links a:hover::after { width: 100%; }
     .hero-conteudo { grid-template-columns: 1fr; gap: 35px; text-align: center; padding-bottom: 45px; }
     .hero-forma { display: none; }
     .hero h1 { font-size: 40px; }
@@ -1244,19 +1251,22 @@ footer {
 @media (max-width: 600px) {
     .nav-actions > .btn { display: none; }
     .nav-actions { display: flex; align-items: center; }
-    .nav-links.ativo { display: flex; position: absolute; top: 68px; left: 0;
-    width: 100%; flex-direction: column; align-items: center; gap: 0;padding: 20px; background-color: rgba(247,239,220,0.98); border-bottom: 2px solid var(--ink); }
+    .nav-links.ativo { display: flex; position: absolute; top: 68px; left: 0; width: 100%; flex-direction: column; align-items: center; gap: 12px; padding: 20px; background-color: rgba(247,239,220,0.98); border-bottom: 2px solid var(--ink); }
     .nav-links.ativo li { width: 100%; text-align: center; }
-    .nav-links.ativo a { display: block; width: 100%; padding: 15px; font-size: 15px; }
+    .nav-links.ativo a { font-size: 15px; text-decoration: none; position: relative; padding: 4px 0; }
+    .nav-links a::after { content: ""; position: absolute;
+    left: 0; bottom: 2px; width: 0; height: 3px; border-radius: 2px; background: var(--terracotta);
+    transition: width .25s ease; }
+    .nav-links a:hover::after { width: 100%; }
     .hero { padding: 45px 20px 0; }
     .hero-conteudo { grid-template-columns: 1fr; gap: 35px; text-align: center; padding-bottom: 45px; }
     .hero h1 { font-size: 40px; }
     .hero-imagem img { width: 90%; max-width: 360px; }
     .hero-forma { display: none; }
     .beneficios { padding: 35px 20px; }
-    .beneficios-grade { display: grid; grid-template-columns: repeat(2, 1fr);gap: 20px 12px;}
-    .beneficio-item { font-size: 10px; }
-    .beneficio-item img { width: 26px; height: 26px; }
+    .beneficios-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+    .beneficio-item { display: flex; align-items: center; justify-content: flex-start; font-size: 10px; gap: 10px; padding: 10px 15px; }
+    .beneficio-item img { width: 25px; height: 25px; }
     .aulas-grade { grid-template-columns: 1fr; max-width: 350px; }
     .aulas-card { min-height: auto; padding: 20px 18px 25px; }
     .aulas-forma { display: none; }

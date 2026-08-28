@@ -4,9 +4,7 @@ Landing page de um estúdio de yoga fictício, criada com uma identidade visual 
 
 ## Sobre o projeto
 
-O Tropical Yoga apresenta uma experiência digital para um estúdio de yoga, com informações sobre suas práticas, planos e benefícios.
-
-A proposta visual utiliza cores tropicais, ilustrações e formas orgânicas para transmitir uma sensação de leveza, movimento e conexão com a natureza.
+O Tropical Yoga apresenta uma experiência digital para um estúdio de yoga, com informações sobre suas práticas, planos e benefícios. A proposta visual utiliza cores tropicais, ilustrações e formas orgânicas para transmitir uma sensação de leveza, movimento e conexão com a natureza.
 
 ## Funcionalidades
 

@@ -1,4 +1,4 @@
-# Tropical Yoga 🧘🏻‍♀️🌿
+# 🧘🏻‍♀️🌿 Tropical Yoga 
 
 Landing page de um estúdio de yoga fictício, criada com uma identidade visual inspirada na natureza, na brasilidade e no modernismo brasileiro. O projeto foi desenvolvido para praticar HTML, CSS e JavaScript, explorando criação de interfaces, responsividade, acessibilidade e interações.
 

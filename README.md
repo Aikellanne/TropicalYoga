@@ -44,7 +44,7 @@ No mobile, a interface é adaptada para facilitar a navegação, incluindo:
 - Ajustes de tipografia e espaçamento
 - Remoção de elementos decorativos para melhorar a experiência em telas menores
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 Se você quiser clonar e visualizar o projeto na sua máquina, siga os passos abaixo:
 
@@ -62,6 +62,6 @@ Se você quiser clonar e visualizar o projeto na sua máquina, siga os passos ab
    * Abra o arquivo `index.html` diretamente no seu navegador de preferência, **ou**
    * Utilize a extensão **Live Server** do VS Code para uma visualização com atualização automática em tempo real.
 
-## 📄 Licença
+## Licença
 
 Distribuído sob a licença **MIT**. Sinta-se à vontade para utilizar e estudar o código!

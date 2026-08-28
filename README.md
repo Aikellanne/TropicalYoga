@@ -1,8 +1,6 @@
-# Tropical Yoga
+# Tropical Yoga 🧘🏻‍♀️🌿
 
-Landing page de um estúdio de yoga fictício, criada com uma identidade visual inspirada na natureza, na brasilidade e no modernismo brasileiro.
-
-O projeto foi desenvolvido para praticar HTML, CSS e JavaScript, explorando criação de interfaces, responsividade, acessibilidade e interações.
+Landing page de um estúdio de yoga fictício, criada com uma identidade visual inspirada na natureza, na brasilidade e no modernismo brasileiro. O projeto foi desenvolvido para praticar HTML, CSS e JavaScript, explorando criação de interfaces, responsividade, acessibilidade e interações.
 
 ## Sobre o projeto
 
@@ -46,3 +44,24 @@ No mobile, a interface é adaptada para facilitar a navegação, incluindo:
 - Ajustes de tipografia e espaçamento
 - Remoção de elementos decorativos para melhorar a experiência em telas menores
 
+## 🚀 Como Executar o Projeto
+
+Se você quiser clonar e visualizar o projeto na sua máquina, siga os passos abaixo:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/TropicalYoga.git
+   ```
+
+2. **Abra a pasta do projeto** no seu editor de código preferido (como o **VS Code**):
+   ```bash
+   cd TropicalYoga
+   ```
+
+3. **Execute o projeto:**
+   * Abra o arquivo `index.html` diretamente no seu navegador de preferência, **ou**
+   * Utilize a extensão **Live Server** do VS Code para uma visualização com atualização automática em tempo real.
+
+## 📄 Licença
+
+Distribuído sob a licença **MIT**. Sinta-se à vontade para utilizar e estudar o código!

@@ -60,6 +60,3 @@ Se você quiser clonar e visualizar o projeto na sua máquina, siga os passos ab
    * Abra o arquivo `index.html` diretamente no seu navegador de preferência, **ou**
    * Utilize a extensão **Live Server** do VS Code para uma visualização com atualização automática em tempo real.
 
-## Licença
-
-Distribuído sob a licença **MIT**. Sinta-se à vontade para utilizar e estudar o código!
